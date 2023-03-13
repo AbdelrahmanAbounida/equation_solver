@@ -1,0 +1,88 @@
+## jinja
+######################
+1- include  component
+######################
+{% include ('components/navbar.html') %}
+
+#####################
+2- extend a template
+######################
+{% extends 'index.html' %}
+
+
+###################
+3- defining a block
+###################
+{% block content %}
+    <h1>This is block </h1>
+{% endblock content %}
+
+###################
+4- flash
+###################
+
+## ex1
+flash("The password is in correct","danger")
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="mt-5 container">
+      {% for category, message in messages %}
+        <p class="container alert alert-{{ category }}">{{ message }}</p>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+## ex2
+flash('Please enter your name and email.')
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flash-messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+###################
+5- url_for
+###################
+
+{{url_for('index')}}
+{{ url_for('static', filename='imgs/curve.png') }}
+
+###################
+6- forms
+###################
+
+
+###################
+7- Authentication
+###################
+{% if current_user.is_authenticated %}
+
+
+###################
+8- Handling datastructures
+###################
+
+return render_template("index.html",context=[1,2,3])
+
+{% for item in items %}
+  {% if item == 1 %}
+  <li>{{item}}</li>
+  {% else %}
+    <li>1234</li>
+
+  {% endif %}
+
+{% endfor %}
+
+## u can use any python structuer between {{}}
+ex: {{class.item}}
+
+#######################################################
+#######################################################
+

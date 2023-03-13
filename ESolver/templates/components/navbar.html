@@ -1,0 +1,24 @@
+<nav class=" navbar navbar-expand-lg navbar-dark" style="background-color:#500a70">
+        
+  <div class="container">
+    {% include 'components/logo.html' %}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse w-50 mx-5 fs-4 pb-0" id="navbarSupportedContent" style="height:100%">
+        <ul class="navbar-nav me-auto  mt-2" >
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item ms-lg-5 me-0">
+              <a class="nav-link text-white" href="{{ url_for('linear') }}">Linear</a>
+            </li>
+            <li class="nav-item ms-lg-5 me-0">
+                <a class="nav-link text-white" href="{{ url_for('nonlinear') }}">NonLinear</a>
+            </li>
+
+          </ul>
+
+    </div>
+    
+  </nav>

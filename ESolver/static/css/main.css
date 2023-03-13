@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+.btnn{
+    border-color: #fff;
+    color:#fff;
+}
+.btnn:hover{
+    background-color: rgb(247, 244, 249);
+}
+.box{
+    background-color:#500a70;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:44px;
+    transition: ease-in-out 0.2s !important;
+
+}
+.box:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    background-color:#680a94;
+    transition: ease-in-out 0.2s !important;
+
+}
+
+.customButton{
+    background-color:#500a70;
+    color:#fff;
+}
+.customButton:hover{
+    background-color: #640b8e;
+    color:#fff;
+    transition: ease-in-out 0.1s !important;
+    
+}
+
+.nav-link:hover{
+    color: #d1bcda !important;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='purble' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='M7.5 9.5l5 5 5-5z'/></svg>") no-repeat right center / 1em !important;
+    color: #640b8e !important;
+    padding-right: 1.5em;
+  }
